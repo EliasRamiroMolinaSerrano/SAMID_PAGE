@@ -1,0 +1,202 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body */
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #F9FEFE;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Evita el desplazamiento horizontal */
+  }
+  
+/* Animación del Navbar */
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #DCF9F7;
+    border-bottom: 2px solid #47C5C2;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .navbar:hover {
+    padding: 30px 20px; /* Incrementa el tamaño del navbar en 15px */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background-color: #38BAB7;
+  }
+  
+  /* Logo */
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .sam {
+    color: #38BAB7;
+    transition: color 0.3s; /* Agrega transición suave */
+  }
+  
+  .navbar:hover .sam {
+    color: #fff; /* Cambia a blanco al hacer hover */
+  }
+  
+  .id {
+    color: #6A84AF;
+  }
+  
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  .navbar:hover .logo {
+    color: #fff; /* Cambia el color del logo al hacer hover */
+  }
+  
+  .menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  .navbar:hover .menu-icon {
+    color: #fff;
+  }
+  
+
+  h1{
+    margin-bottom: 10%;
+  }
+
+  li{
+    margin-left: 5%;
+  }
+  
+  .id {
+    color: #6A84AF;
+  }
+  
+  .menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 20px;
+    background-color: #F9FEFE;
+    border: 1px solid #47C5C2;
+    border-radius: 5px;
+    overflow: hidden;
+    z-index: 100;
+  }
+  
+  .dropdown-menu a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .dropdown-menu a:hover {
+    background-color: #DCF9F7;
+  }
+  
+  .dropdown-menu.show {
+    display: block;
+  }
+  
+  /* Main Content */
+  .faq-container {
+    margin: 40px auto;
+    max-width: 800px;
+    padding: 20px;
+    background-color: #F9FEFE;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .faq-question {
+    font-size: 1.4em;
+    cursor: pointer;
+    color: #38BAB7;
+    padding: 10px;
+    border: 1px solid #47C5C2;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s;
+  }
+  
+  .faq-question:hover {
+    background-color: #47C5C2;
+    color: #fff;
+  }
+  
+  .faq-answer {
+    display: none;
+    padding: 10px;
+    background-color: #DCF9F7;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Footer */
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #47C5C2;
+    color: #fff;
+    padding: 20px;
+  }
+  
+  .footer-column {
+    flex: 1;
+    padding: 0 10px;
+  }
+  
+  .footer-column h3 {
+    margin-bottom: 10px;
+  }
+  
+  .footer-column a {
+    display: block;
+    margin-bottom: 5px;
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .footer-column a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .faq-container {
+      padding: 10px;
+    }
+  
+    .footer {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .footer-column {
+      padding: 10px 0;
+    }
+  }
+  

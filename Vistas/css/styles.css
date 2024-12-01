@@ -1,0 +1,384 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #F9FEFE;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Evita el desplazamiento horizontal */
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #DCF9F7;
+  border-bottom: 2px solid #47C5C2;
+  position: relative;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.sam {
+  color: #38BAB7;
+}
+
+.id {
+  color: #6A84AF;
+}
+
+.menu-icon {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 20px;
+  background-color: #F9FEFE;
+  border: 1px solid #47C5C2;
+  border-radius: 5px;
+  overflow: hidden;
+  z-index: 100;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #333;
+}
+
+.dropdown-menu a:hover {
+  background-color: #DCF9F7;
+}
+
+.dropdown-menu.show {
+  display: block;
+}
+
+/* Main Content */
+.container {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+  max-width: 1200px; /* Ancho máximo del contenedor */
+  margin: 0 auto; /* Centra el contenedor */
+  overflow-x: hidden; /* Oculta cualquier desbordamiento horizontal */
+}
+
+.text-section {
+  flex: 1;
+  max-width: 40%;
+  padding-right: 20px;
+}
+
+.text-section h1 {
+  font-size: 2em;
+  margin-bottom: 15px;
+  color: #38BAB7;
+}
+
+.text-section p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.cta-button {
+  padding: 10px 20px;
+  background-color: #47C5C2;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.cta-button:hover {
+  background-color: #38BAB7;
+}
+
+.image-section {
+  flex: 1;
+  max-width: 100%;
+  overflow: hidden; /* Oculta las partes sobrantes */
+}
+
+.image-section img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  object-fit: cover; /* Ajusta la imagen al contenedor sin distorsionarla */
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: #47C5C2;
+  color: #fff;
+  padding: 20px;
+}
+
+.footer-column {
+  flex: 1;
+  padding: 0 10px;
+}
+
+.footer-column h3 {
+  margin-bottom: 10px;
+}
+
+.footer-column a {
+  display: block;
+  margin-bottom: 5px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.footer-column a:hover {
+  text-decoration: underline;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .text-section,
+  .image-section {
+    max-width: 100%;
+  }
+
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-column {
+    padding: 10px 0;
+  }
+}
+
+.features {
+  margin: 40px 0;
+}
+
+.container, .feature-card {
+  max-width: 100%; /* Asegura que no sobresalgan del ancho de la página */
+  overflow: hidden; /* Evita que el contenido interno desborde el contenedor */
+}
+
+img {
+  max-width: 100%; /* Impide que las imágenes superen el ancho del contenedor */
+  height: auto;
+}
+
+.feature-image {
+  margin: 0 auto; /* Centra las imágenes y evita que sobresalgan */
+}
+
+
+.feature-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px auto; /* Centra las tarjetas horizontalmente */
+  padding: 20px;
+  background-color: #DCF9F7;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, background-color 0.3s;
+  max-width: 95%; /* Limita el ancho de las tarjetas al 90% del viewport */
+  overflow: hidden; /* Evita que el contenido de las tarjetas sobresalga */
+}
+
+.feature-card.feature-reverse {
+  flex-direction: row-reverse;
+  background-color: #F9FEFE;
+}
+
+.feature-card:hover {
+  transform: scale(1.05); /* Permite el zoom sin salir del contenedor */
+  background-color: #47C5C2;
+}
+
+/* Para asegurar que el contenedor padre no desborde */
+.features {
+  overflow: hidden; /* Oculta cualquier desbordamiento */
+  max-width: 100%; /* Asegura que las características respeten el ancho del viewport */
+  margin: 0 auto; /* Centra todo el contenido dentro del viewport */
+  padding: 0 10px; /* Añade algo de margen interno para evitar que las tarjetas se acerquen demasiado a los bordes */
+}
+
+
+.feature-text {
+  flex: 1;
+  padding: 0 20px;
+}
+
+.feature-text h2 {
+  font-size: 1.8em;
+  color: #38BAB7;
+  margin-bottom: 10px;
+}
+
+.feature-text p {
+  font-size: 1.2em;
+  color: #333;
+}
+
+.feature-image {
+  flex: 1;
+  max-width: 500px; /* Ancho máximo para las imágenes */
+  height: 500px; /* Altura fija para todas las imágenes */
+  overflow: hidden; /* Oculta las partes sobrantes de las imágenes */
+  border-radius: 10px; /* Bordes redondeados */
+  margin: 0 auto; /* Centra las imágenes en el contenedor */
+}
+
+.feature-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajusta la imagen al contenedor sin distorsionarla */
+}
+
+/* Animación del Navbar */
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #DCF9F7;
+  border-bottom: 2px solid #47C5C2;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar:hover {
+  padding: 30px 20px; /* Incrementa el tamaño del navbar en 15px */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  background-color: #38BAB7;
+}
+
+/* Logo */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.sam {
+  color: #38BAB7;
+  transition: color 0.3s; /* Agrega transición suave */
+}
+
+.navbar:hover .sam {
+  color: #fff; /* Cambia a blanco al hacer hover */
+}
+
+.id {
+  color: #6A84AF;
+}
+
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.navbar:hover .logo {
+  color: #fff; /* Cambia el color del logo al hacer hover */
+}
+
+.menu-icon {
+  font-size: 24px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.navbar:hover .menu-icon {
+  color: #fff;
+}
+
+/* Footer redes sociales */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: linear-gradient(to right, #38BAB7, #47C5C2);
+  color: #fff;
+  padding: 30px;
+  flex-wrap: wrap;
+  text-align: left;
+  gap: 20px;
+}
+
+.footer-column {
+  flex: 1;
+  padding: 0 20px;
+}
+
+.footer-column h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.footer-column a {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.1em;
+  transition: transform 0.3s, text-shadow 0.3s;
+}
+
+.footer-column a:hover {
+  transform: translateX(5px);
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+}
+
+/* Redes Sociales */
+.social-icons {
+  display: flex;
+  justify-content: flex-start;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.social-icons a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.8em;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2); /* Efecto de agrandamiento al hacer hover */
+  color: #000; /* Cambia el color del ícono al negro */
+}
+

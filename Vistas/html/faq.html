@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Preguntas Frecuentes - SAMID</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/Vistas/css/faq.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">
+      <span class="sam">SAM</span><span class="id">ID</span>
+    </div>
+    <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+    <nav class="dropdown-menu" id="dropdownMenu">
+      <a href="/index.html">Inicio</a>
+      <a href="/Vistas/html/faq.html">Acerca de</a>
+      <a href="#features">Funciones</a>
+      <a href="#contact">Contacto</a>
+    </nav>
+  </header>
+
+  <main class="faq-container">
+    <h1>Preguntas Frecuentes</h1>
+    
+    <!-- Pregunta 1 -->
+    <div class="faq-question" onclick="toggleAnswer(1)">¿Dónde puedo conseguir mi dispositivo?</div>
+    <div class="faq-answer" id="answer1">
+      Puedes conseguir tu dispositivo en nuestra página web, y en un futuro estará disponible en Mercado Libre y Amazon.
+    </div>
+
+    <!-- Pregunta 2 -->
+    <div class="faq-question" onclick="toggleAnswer(2)">No puedo conectar mi dispositivo</div>
+    <div class="faq-answer" id="answer2">
+      Si tienes problemas para conectar tu dispositivo, intenta lo siguiente:
+      <ul>
+        <li>Verifica que el Bluetooth esté activado en tu celular.</li>
+        <li>Asegúrate de que tu dispositivo esté encendido y dentro del rango de conexión.</li>
+        <li>Intenta reiniciar tanto el dispositivo como el teléfono.</li>
+        <li>Revisa que la app tenga los permisos necesarios para conectarse al dispositivo.</li>
+      </ul>
+    </div>
+
+    <!-- Pregunta 3 -->
+    <div class="faq-question" onclick="toggleAnswer(3)">¿Dónde puedo descargar la app?</div>
+    <div class="faq-answer" id="answer3">
+      Puedes descargar la app escaneando el siguiente código QR (agregar el QR aquí más tarde).
+      <img src="qr-placeholder.png" alt="QR Code" style="max-width: 200px; display: block; margin: 10px auto;">
+    </div>
+  </main>
+
+
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('dropdownMenu');
+      menu.classList.toggle('show');
+    }
+
+    function toggleAnswer(answerId) {
+      const answer = document.getElementById('answer' + answerId);
+      answer.style.display = (answer.style.display === 'block') ? 'none' : 'block';
+    }
+  </script>
+</body>
+</html>

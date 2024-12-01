@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SAMID - Monitoriza a tus seres queridos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Vistas/css/styles.css">
+  <link rel="icon" href="Vistas/Images/logo.png"image/png">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">
+      <span class="sam">SAM</span><span class="id">ID</span>
+    </div>
+    <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+    <nav class="dropdown-menu" id="dropdownMenu">
+      <a href="#home">Inicio</a>
+      <a href="/Vistas/html/faq.html">Acerca de</a>
+      <a href="#features">Funciones</a>
+      <a href="#contact">Contacto</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="text-section">
+      <h1>Monitoriza y Cuida a Tus Seres Queridos</h1>
+      <p>
+        Con SAMID, mantente conectado con el bienestar de tu familia y asegura su seguridad 
+        mediante funciones de monitoreo en tiempo real.
+      </p>
+      <button class="cta-button">Más Información</button>
+    </section>
+    <section class="image-section">
+      <img src="https://images.pexels.com/photos/4426521/pexels-photo-4426521.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Familia feliz cuidando su salud">
+    </section>
+  </main>
+
+  <section class="features">
+    <!-- Pulsómetro y Oxímetro -->
+    <div class="feature-card">
+      <div class="feature-text">
+        <h2>Pulsómetro y Oxímetro</h2>
+        <p>Con SAMID podrás monitorear el ritmo cardíaco y los niveles de oxígeno en la sangre en tiempo real, brindando tranquilidad y seguridad para ti y tus seres queridos.</p>
+      </div>
+      <div class="feature-image">
+        <img src="https://images.pexels.com/photos/5998481/pexels-photo-5998481.jpeg" alt="Pulsómetro y oxímetro">
+      </div>
+    </div>
+  
+    <!-- Localización -->
+    <div class="feature-card feature-reverse">
+      <div class="feature-image">
+        <img src="https://images.pexels.com/photos/19937220/pexels-photo-19937220/free-photo-of-viaje-viajar-trayecto-mapa.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Localización">
+      </div>
+      <div class="feature-text">
+        <h2>Localización</h2>
+        <p>SAMID te permite conocer en todo momento la ubicación de tus seres queridos mediante tecnología de geolocalización precisa y actualizada.</p>
+      </div>
+    </div>
+  
+    <!-- Detector de caídas -->
+    <div class="feature-card">
+      <div class="feature-text">
+        <h2>Detector de Caídas</h2>
+        <p>Detecta automáticamente caídas y envía alertas inmediatas a tus dispositivos, permitiendo una rápida respuesta ante emergencias.</p>
+      </div>
+      <div class="feature-image">
+        <img src="https://images.pexels.com/photos/5916586/pexels-photo-5916586.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Detector de caídas">
+      </div>
+    </div>
+  
+    <!-- Agregar varios pacientes -->
+    <div class="feature-card feature-reverse">
+      <div class="feature-image">
+        <img src="https://images.unsplash.com/photo-1478061653917-455ba7f4a541?q=80&w=1700&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Agregar varios pacientes">
+      </div>
+      <div class="feature-text">
+        <h2>Agregar Varios Pacientes</h2>
+        <p>Administra el cuidado de múltiples pacientes desde una sola plataforma. Ideal para familias o profesionales de la salud.</p>
+      </div>
+    </div>
+  </section>
+  
+
+  <footer class="footer">
+    <div class="footer-column">
+      <h3>SAMID</h3>
+      <p>
+        Es una aplicación moderna para smartphones que ofrece un sistema de monitoreo
+        amigable y fácil de usar para mejorar la calidad de vida de personas con problemas
+        de salud, ayudándolas a rastrear su bienestar.
+      </p>
+      <p>Contáctanos: SAMID.contacto.com</p>
+    </div>
+    <div class="footer-column">
+      <h3>Ayuda</h3>
+      <p>Nuestra historia</p>
+      <p>Política de envío</p>
+      <p>Política de reembolso</p>
+      <p>Términos y condiciones</p>
+    </div>
+    <div class="footer-column">
+      <h3>Redes Sociales</h3>
+      <a href="https://www.tiktok.com" target="_blank">TikTok</a>
+      <a href="https://www.facebook.com" target="_blank">Facebook</a>
+      <a href="https://www.youtube.com" target="_blank">YouTube</a>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('dropdownMenu');
+      menu.classList.toggle('show');
+    }
+  </script>
+</body>
+</html>
